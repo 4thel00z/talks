@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/black.css" id="theme">
+    <style>
+        li {
+            list-style-type: none;
+        }
+    </style>
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section data-background-color="#000000">
+            <h2>Skill development 101</h2>
+        </section>
+        <section data-background-color="#000000">
+            <!--<h4>Part I - Data 📊</h4>-->
+            <h3 style="text-transform:lowercase">ls -lrt .</h3>
+            <ul>
+                <li class="fragment">Conception 🤓</li>
+                <li class="fragment">Boilerplate 🔢</li>
+                <li class="fragment">Write the skill</li>
+                <li class="fragment">Skill configuration 😎</li>
+            </ul>
+        </section>
+
+
+        <!-- What is open source? -->
+
+        <section data-background-color="#000000">
+            <h2 class="fragment">Conception</h2>
+            <img src="https://i.pinimg.com/originals/8c/d2/d5/8cd2d5fd2fbdd6e21a70faf16ed8efb4.png" alt=""
+                 class="fragment">
+            <p class="fragment">Everyone loves memes️</p>
+            <p class="fragment">Let us build a meme skill!</p>
+        </section>
+        <section data-background-color="#000000">
+            <h2 class="fragment">What do we need?</h2>
+            <p class="fragment">Bunch of hosted memes</p>
+            <p class="fragment">A skill</p>
+            <p class="fragment">Skill configuration</p>
+            <p class="fragment">Skill deployment</p>
+        </section>
+
+
+        <section data-background-color="#000000">
+            <h2 class="fragment">Get and host the memes</h2>
+            <p class="fragment">Get the assets</p>
+            <code class="fragment">
+                git clone https://github.com/magenta-voice/memebonanza-assets assets
+            </code>
+            <p class="fragment"></p>
+
+        </section>
+
+        <section data-background-color="#000000">
+            <h2 class="fragment">Upload the images...</h2>
+            <code class="fragment">
+                up
+            </code>
+        </section>
+
+        <section data-background-color="#000000">
+            <h2 class="fragment">Update the url...</h2>
+            <code class="fragment">
+                up url -c
+            </code>
+        </section>
+
+
+        <section data-background-color="#000000">
+            <h2 class="fragment">Let's write the skill!</h2>
+            <p class="fragment">Let us generate the boilerplate:</p>
+            <code class="fragment">pip download --no-deps --no-binary :all: skill_sdk && tar xzf skill-sdk-*.tar.gz &&
+                python skill-sdk-*/setup.py new_skill</code>
+        </section>
+
+        <section data-background-color="#000000">
+            <h2 class="fragment">Run the skill locally</h2>
+            <code class="fragment">
+                python3 manage.py --dev run
+            </code>
+        </section>
+
+        <section data-background-color="#000000">
+            <h2 class="fragment">Now we will write our first handler...</h2>
+        </section>
+
+        <section data-background-color="#000000">
+            <h2 class="fragment">Time for the unit test...</h2>
+        </section>
+        <section data-background-color="#000000">
+            <h2 class="fragment">Deploy the skill</h2>
+            <p class="fragment">We will use ngrok while we develop the skill</p>
+            <code class="fragment">
+                ngrok http 4242
+            </code>
+        </section>
+
+
+        <section data-background-color="#000000">
+            <h2 class="fragment">Skill configuration</h2>
+            <p class="fragment">Go to: <a href="https://commandcenter.voiceui.telekom.net/skill-development-portal/adminui/#/skills/" class="">SDP</a></p>
+            <a href="https://github.com/magenta-voice/hackathon-conf" class="fragment">https://github.com/magenta-voice/hackathon-conf</a>
+            <p class="fragment"><a href="https://github.com/4thel00z/dcm/releases/tag/v0.1.2">domain context management
+                    generation tool</a></p>
+        </section>
+
+
+    </div>
+</div>
+
+<script src="dist/reveal.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+    });
+</script>
+</body>
+</html>
